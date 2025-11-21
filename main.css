@@ -1,0 +1,438 @@
+/* --- Global Styles & Background --- */
+/* Requirement (a): Single external file */
+/* Requirement (e): CSS background image for all pages */
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #0d1a2b; /* Dark fallback */
+    color: #333; /* Default text color for light boxes */
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+/* Requirement (b): Use HEADER */
+header {
+    background-color: rgba(18, 26, 38, 0.95); /* Semi-transparent dark blue */
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 3px solid #00c4cc; /* Aqua accent */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #00c4cc;
+    letter-spacing: 2px;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav a {
+    color: #a0aec0; /* Light gray nav links */
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.15em;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+header nav a:hover, header nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #00c4cc;
+}
+
+/* --- Main Content Section --- */
+/* Requirement (b): Use SECTION */
+section.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.98); /* Light background for content */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Requirement (b): Use h1-h6 headings */
+h2 {
+    color: #1a202c;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+h3, h4 {
+    color: #2d3748;
+}
+
+/* --- Footer --- */
+/* Requirement (b): Use FOOTER */
+/* Requirement (c): All footer elements */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #1a202c;
+    color: #a0aec0;
+    margin-top: 50px;
+    border-top: 3px solid #00c4cc;
+}
+
+footer .social-icons img {
+    width: 28px;
+    margin: 0 12px;
+    opacity: 0.8;
+}
+footer p {
+    margin: 10px 0 0 0;
+    font-size: 0.9em;
+}
+
+/* --- Home Page: Login Form --- */
+/* Requirement (f): A Login Form */
+.login-form {
+    background: #f7fafc;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 450px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.login-form h3 {
+    margin-top: 0;
+    text-align: center;
+}
+.login-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+}
+.login-form button {
+    background-color: #00c4cc;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+.login-form button:hover {
+    background-color: #009999;
+}
+
+/* --- Home Page: Button to Team --- */
+/* Requirement (f): A button linking to another page */
+.btn-primary {
+    display: inline-block;
+    background-color: #00c4cc;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+}
+.btn-primary:hover {
+    background-color: #009999;
+    transform: translateY(-2px);
+}
+
+/* --- Team Members Section Styling --- */
+/* Requirement (g): Table-like data, styled as cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member-card {
+    background-color: #f7fafc;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+.team-member-card .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 4px solid #00c4cc;
+    margin-bottom: 15px;
+}
+.team-member-card h3 {
+    margin: 10px 0 5px 0;
+    color: #1a202c;
+    font-size: 1.4em;
+}
+.team-member-card .member-id-course {
+    font-size: 0.9em;
+    color: #718096;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 15px;
+}
+.team-member-card .member-bio {
+    font-size: 0.95em;
+    color: #4a5568;
+    min-height: 60px; /* Gives cards a uniform height */
+
+}
+
+/* --- Global Styles & Resets --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* White background */
+  color: #1f2937; /* Dark text for readability */
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #0a2351; /* Navy Blue for headings */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Header Section --- */
+.team-header {
+  background-color: #0a2351; /* Navy Blue background */
+  color: #ffffff; /* White text */
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.team-header h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-header p {
+  font-size: 1.125rem;
+  color: #e6f7ff; /* Light blue tint for subheading */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Shared Section Styling --- */
+.team-table-section,
+.team-grid-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+}
+
+.team-table-section h2,
+.team-grid-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Adds a small light blue underline to section titles */
+.team-table-section h2::after,
+.team-grid-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3b82f6; /* Light Blue accent */
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
+}
+
+/* --- Team Table Section --- */
+/* Add a container to allow horizontal scrolling on small screens */
+.team-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.team-table {
+  width: 100%;
+  min-width: 700px; /* Ensure table has a minimum width for scrolling */
+  border-collapse: collapse;
+}
+
+.team-table thead {
+  background-color: #0a2351; /* Navy Blue header */
+  color: #ffffff; /* White text */
+}
+
+.team-table th,
+.team-table td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.team-table th {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-table tbody tr {
+  background-color: #ffffff; /* White row */
+  transition: background-color 0.3s ease;
+}
+
+.team-table tbody tr:nth-child(even) {
+  background-color: #f0f7ff; /* Very Light Blue stripe */
+}
+
+.team-table tbody tr:hover {
+  background-color: #e6f0ff; /* Light Blue on hover */
+}
+
+.table-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Horizontal Rule --- */
+hr {
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 4rem auto;
+  width: 80%;
+}
+
+/* --- Team Grid Section --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 4px solid #f0f7ff; /* Very Light Blue border */
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: #0a2351; /* Navy Blue */
+}
+
+.team-card .role {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6; /* Light Blue accent */
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.team-card p:not(.role) {
+  font-style: italic;
+  color: #6b7280; /* Lighter text for quote */
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .team-header {
+    padding: 3rem 1rem;
+  }
+
+  .team-header h1 {
+    font-size: 2rem;
+  }
+
+  .team-header p {
+    font-size: 1rem;
+  }
+
+  .team-table-section,
+  .team-grid-section {
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .team-table-section h2,
+  .team-grid-section h2 {
+    font-size: 1.75rem;
+  }
+}
